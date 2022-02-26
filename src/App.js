@@ -8,6 +8,8 @@ import Nav from "./components/Nav.js";
 import Chat from "./components/Chat.js";
 import Community from "./components/Community.js";
 import Setting from "./components/Setting.js";
+import Chatting from "./components/Chatting.js";
+
 import Data from "./data/data.js";
 import SiteData from "./data/data_site.js";
 import mySiteData from "./data/data_community.js";
@@ -28,8 +30,12 @@ function App() {
             <Profile profile={profile} />
           </Route>
 
-          <Route path="/chat">
+          <Route exact path="/chat">
             <Chat profile={profile} />
+          </Route>
+
+          <Route path="/chat/:id" component={Chatting}>
+            <Chatting profile={profile} />
           </Route>
 
           <Route path="/community">

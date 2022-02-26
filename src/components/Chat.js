@@ -1,3 +1,6 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 function Chat(props) {
   return (
     <section className="chat">
@@ -6,7 +9,7 @@ function Chat(props) {
           <h4 className="common-title">CHATS</h4>
           <ul className="common-icon">
             <li className="fas fa-search"></li>
-            <li className="fas fa-cog"></li>
+            <li className="fas fa-sliders-h"></li>
           </ul>
         </div>
       </div>
@@ -14,17 +17,19 @@ function Chat(props) {
       <ul className="chat-list">
         {props.profile.map((a, i) => {
           return (
-            <li className="chat-list-item user-contents" key={i}>
-              <img
-                className="user-img"
-                src={"assets/profile0" + (i + 2) + ".jpg"}
-                alt="프로필사진"
-              />
-              <div className="user-content">
-                <h4>{props.profile[i].name}</h4>
-                <p>{props.profile[i].msg}</p>
-              </div>
-            </li>
+            <Link to={`/chat/${props.profile[i].id}`} key={i}>
+              <li className="chat-list-item user-contents">
+                <img
+                  className="user-img"
+                  src={"assets/profile0" + i + ".jpg"}
+                  alt={props.profile[i].name}
+                />
+                <div className="user-content">
+                  <h4>{props.profile[i].name}</h4>
+                  <p>{props.profile[i].msg[0].text}</p>
+                </div>
+              </li>
+            </Link>
           );
         })}
       </ul>

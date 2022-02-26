@@ -1,6 +1,6 @@
 ## 실시간 시계 만들기
 
-react-live-clock 사용
+react-live-clock 라이브러리
 
 https://momentjs.com/docs/#/displaying/format/
 

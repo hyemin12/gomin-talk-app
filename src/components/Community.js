@@ -8,7 +8,7 @@ function Community(props) {
           <h4 className="common-title">COMMUNITY</h4>
           <ul className="common-icon">
             <li className="fas fa-search"></li>
-            <li className="fas fa-cog"></li>
+            <li className="fas fa-sliders-h"></li>
           </ul>
         </div>
       </div>

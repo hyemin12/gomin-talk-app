@@ -11,6 +11,11 @@ li {
 }
 a {
   text-decoration: none;
+  color: #333;
+}
+$mainColor: #64b7f6;
+.common-icon {
+  cursor: pointer;
 }
 
 // OVERSIZE
@@ -141,6 +146,92 @@ a {
   padding: 10px 20px;
 }
 
+// CHATTING
+.chatting {
+  padding: 10px 20px;
+  .date {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+    font-size: 12px;
+    color: #555;
+  }
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    margin-bottom: 15px;
+    color: #333;
+    h4 {
+      font-size: 18px;
+    }
+    i {
+      cursor: pointer;
+      font-size: 20px;
+    }
+    i.fa-angle-left {
+      font-size: 26px;
+    }
+  }
+
+  .get-msg-list {
+    padding-top: 20px;
+    .get-msg-item {
+      display: flex;
+      margin-bottom: 20px;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .msg {
+        margin-left: 10px;
+        position: relative;
+        h4 {
+          font-size: 14px;
+          margin-bottom: 7px;
+        }
+        p {
+          background: #c2e5ff;
+          padding: 15px;
+          font-size: 14px;
+          border-radius: 0 20px 20px 20px;
+        }
+        span {
+          font-size: 10px;
+          color: #d3d3d3;
+          position: absolute;
+          bottom: 5px;
+          right: -65px;
+        }
+      }
+    }
+  }
+
+  .send-msg-wrapper {
+    display: flex;
+    align-items: center;
+    textarea {
+      flex-grow: 1;
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px solid rgb(209, 209, 209);
+    }
+    input:focus {
+      outline: none;
+    }
+    i {
+      margin-left: 10px;
+      font-size: 20px;
+      color: rgb(209, 209, 209);
+      cursor: pointer;
+    }
+  }
+}
+
 // COMMUNITY
 .community {
   padding: 10px 20px;
@@ -187,7 +278,7 @@ a {
       }
       .site-official {
         position: relative;
-        top: 0;
+        top: -5px;
         left: 0;
       }
       h4 {
@@ -196,7 +287,7 @@ a {
     }
   }
   .site-official {
-    background: #dc143c;
+    background: $mainColor;
     border-radius: 5px;
     padding: 1px 10px;
     color: #fff;
@@ -204,5 +295,74 @@ a {
     position: absolute;
     top: -19px;
     left: 8px;
+  }
+}
+
+// SETTING
+.setting {
+  padding: 10px 20px;
+  .my-profile {
+    width: 100%;
+    img {
+      display: flex;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+    .my-profile-content {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 40px;
+      h4 {
+        font-weight: normal;
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 10px;
+        color: #999;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+  .setting-list-wrapper {
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    .setting-list-title {
+      font-size: 12px;
+      font-weight: normal;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .setting-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      font-size: 14px;
+      color: #555;
+      cursor: pointer;
+      .setting-item-left {
+        display: flex;
+        align-items: center;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+        span {
+          margin-left: 20px;
+        }
+        i {
+          font-size: 18px;
+        }
+        i.fa-hashtag {
+          color: $mainColor;
+        }
+      }
+      .more {
+        color: $mainColor;
+      }
+    }
   }
 }

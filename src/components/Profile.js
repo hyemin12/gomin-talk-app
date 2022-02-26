@@ -6,12 +6,12 @@ function Profile(props) {
           <h4 className="common-title">FRIENDS</h4>
           <ul className="common-icon">
             <li className="fas fa-search"></li>
-            <li className="fas fa-cog"></li>
+            <li className="fas fa-sliders-h"></li>
           </ul>
         </div>
         <h4 className="user-sub-title">내 프로필</h4>
         <div className="user-contents">
-          <img className="user-img" src="assets/profile01.jpg" alt="" />
+          <img className="user-img" src="assets/profile01.jpg" alt="고혜민" />
           <div className="user-content">
             <h4>고혜민</h4>
             <p>졸려..</p>
@@ -26,7 +26,7 @@ function Profile(props) {
               <li className="user-contents" key={i}>
                 <img
                   className="user-img"
-                  src={"assets/profile0" + (i + 2) + ".jpg"}
+                  src={"assets/profile0" + i + ".jpg"}
                   alt={props.profile[i].name}
                 />
                 <div className="user-content">
