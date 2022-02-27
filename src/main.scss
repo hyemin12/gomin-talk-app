@@ -175,7 +175,7 @@ $mainColor: #64b7f6;
       font-size: 26px;
     }
   }
-
+  // 받은 메세지 리스트
   .get-msg-list {
     padding-top: 20px;
     .get-msg-item {
@@ -210,24 +210,69 @@ $mainColor: #64b7f6;
       }
     }
   }
-
-  .send-msg-wrapper {
+  // 보낸 메세지 리스트
+  .my-msg {
+    display: flex;
+    justify-content: end;
+    .my-msg-list {
+      margin-bottom: 20px;
+      position: relative;
+      p {
+        background: #c2e5ff;
+        padding: 15px;
+        font-size: 14px;
+        border-radius: 20px 0 20px 20px;
+      }
+      span {
+        font-size: 10px;
+        color: #d3d3d3;
+        position: absolute;
+        bottom: 5px;
+        left: -65px;
+      }
+    }
+  }
+  .my-msg.hidden {
+    display: none;
+  }
+  // 메세지 보내는 창
+  .send-msg-wrapper form {
     display: flex;
     align-items: center;
+    width: 100vw;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     textarea {
+      display: flex;
+      align-items: center;
       flex-grow: 1;
-      padding: 20px;
-      border-radius: 20px;
+      padding: 10px;
       border: 1px solid rgb(209, 209, 209);
+      border-radius: 20px;
+      font-family: "Noto Sans KR", sans-serif;
+      overflow-y: hidden;
+      resize: none;
+      -ms-overflow-style: none;
     }
-    input:focus {
+    textarea::-webkit-scrollbar {
+      -ms-overflow-style: none;
+    }
+    textarea:focus {
       outline: none;
     }
-    i {
+    button {
+      background: transparent;
+      border: none;
       margin-left: 10px;
       font-size: 20px;
       color: rgb(209, 209, 209);
       cursor: pointer;
+      transition: all 0.5s;
+    }
+    button:hover {
+      color: $mainColor;
     }
   }
 }

@@ -35,7 +35,7 @@ function App() {
           </Route>
 
           <Route path="/chat/:id" component={Chatting}>
-            <Chatting profile={profile} />
+            <Chatting profile={profile} profileChange={profileChange} />
           </Route>
 
           <Route path="/community">
@@ -47,7 +47,7 @@ function App() {
           </Route>
         </>
       </Switch>
-      <Nav />
+      <Nav profile={profile} />
     </div>
   );
 }
