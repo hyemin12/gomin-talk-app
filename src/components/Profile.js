@@ -1,3 +1,6 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 function Profile(props) {
   return (
     <section className="profile">
@@ -23,17 +26,19 @@ function Profile(props) {
         <ul className="profile-friends-list">
           {props.profile.map((a, i) => {
             return (
-              <li className="user-contents" key={i}>
-                <img
-                  className="user-img"
-                  src={"assets/profile0" + i + ".jpg"}
-                  alt={props.profile[i].name}
-                />
-                <div className="user-content">
-                  <h4>{props.profile[i].name}</h4>
-                  <p>{props.profile[i].describtion}</p>
-                </div>
-              </li>
+              <Link to={`/profile/detail${props.profile[i].id}`} key={i}>
+                <li className="user-contents">
+                  <img
+                    className="user-img"
+                    src={"assets/profile0" + i + ".jpg"}
+                    alt={props.profile[i].name}
+                  />
+                  <div className="user-content">
+                    <h4>{props.profile[i].name}</h4>
+                    <p>{props.profile[i].describtion}</p>
+                  </div>
+                </li>
+              </Link>
             );
           })}
         </ul>

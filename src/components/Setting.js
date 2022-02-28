@@ -8,7 +8,7 @@ function Setting(props) {
         </ul>
       </div>
       <div className="my-profile">
-        <img src="assets/profile01.jpg" alt="고혜민" />
+        <img src="assets/profile.jpg" alt="고혜민" />
         <div className="my-profile-content">
           <h4>고혜민</h4>
           <p>abcdef@naver.com</p>

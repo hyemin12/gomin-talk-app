@@ -15,6 +15,7 @@ import SiteData from "./data/data_site.js";
 import mySiteData from "./data/data_community.js";
 
 import "./main.scss";
+import ProfileDetail from "./components/ProfileDetail.js";
 
 function App() {
   let [profile, profileChange] = useState(Data);
@@ -29,12 +30,15 @@ function App() {
           <Route exact path="/">
             <Profile profile={profile} />
           </Route>
+          <Route path="/profile/detail:id">
+            <ProfileDetail profile={profile} />
+          </Route>
 
           <Route exact path="/chat">
             <Chat profile={profile} />
           </Route>
 
-          <Route path="/chat/:id" component={Chatting}>
+          <Route path="/chat/:id">
             <Chatting profile={profile} profileChange={profileChange} />
           </Route>
 
@@ -45,9 +49,9 @@ function App() {
           <Route path="/setting">
             <Setting profile={profile} />
           </Route>
+          <Nav profile={profile} />
         </>
       </Switch>
-      <Nav profile={profile} />
     </div>
   );
 }
