@@ -1,0 +1,70 @@
+@import "./main.scss";
+
+// SETTING
+.setting {
+  padding: 10px 20px;
+  .my-profile {
+    width: 100%;
+    img {
+      display: flex;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+    .my-profile-content {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 40px;
+      h4 {
+        font-weight: normal;
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 10px;
+        color: #999;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+  .setting-list-wrapper {
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    .setting-list-title {
+      font-size: 12px;
+      font-weight: normal;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .setting-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      font-size: 14px;
+      color: #555;
+      cursor: pointer;
+      .setting-item-left {
+        display: flex;
+        align-items: center;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+        span {
+          margin-left: 20px;
+        }
+        i {
+          font-size: 18px;
+        }
+        i.fa-hashtag {
+          color: $mainColor;
+        }
+      }
+      .more {
+        color: $mainColor;
+      }
+    }
+  }
+}

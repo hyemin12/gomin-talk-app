@@ -1,5 +1,5 @@
 import React from "react";
-import "../main.scss";
+import "../css/statusBar.scss";
 
 import Clock from "react-live-clock";
 

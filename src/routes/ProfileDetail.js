@@ -2,9 +2,9 @@ import React from "react";
 import { useParams, useHistory } from "react-router-dom";
 
 function ProfileDetail(props) {
+  const profile = props.profile;
   let { id } = useParams();
-  let history = useHistory();
-
+  const history = useHistory();
   return (
     <section className="profile-detail">
       <button
@@ -23,11 +23,11 @@ function ProfileDetail(props) {
         <img
           className="user-img"
           src={`../assets/profile0${id}.jpg`}
-          alt={props.profile[id].name}
+          alt={profile[id].name}
         />
         <div className="user-content">
-          <h4>{props.profile[id].name}</h4>
-          <p>{props.profile[id].describtion}</p>
+          <h4>{profile[id].name}</h4>
+          <p>{profile[id].describtion}</p>
         </div>
       </div>
     </section>

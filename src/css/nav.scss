@@ -1,0 +1,19 @@
+// NAV
+.nav {
+  width: 100vw;
+  background: #fcfcfc;
+  padding: 20px 50px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  .nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+
+    .nav-list-item i {
+      color: #333;
+    }
+  }
+}

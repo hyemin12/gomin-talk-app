@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link, useHistory } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
+import ArtistMsg from "../components/ArtistMsg";
 
-import Mymsg from "./Mymsg";
+import Mymsg from "../components/Mymsg";
 
 function Chatting(props) {
   let { id } = useParams();
-  const profileId = props.profile[id];
-  let [replyitem, setreplyitem] = useState(profileId.reply);
   let history = useHistory();
+  const profile = props.profile[id];
+  let [replyitem, setreplyitem] = useState(profile.reply);
 
   // 날짜 시간 가져오기
   const today = new Date();
@@ -32,13 +33,13 @@ function Chatting(props) {
 
   // text area 높이 조절
   function handleKeyDown(e) {
-    e.target.style.height = "inherit";
+    e.target.style.height = "40px";
     e.target.style.height = `${e.target.scrollHeight}px`;
   }
 
   // 채팅 보내기
   useEffect(() => {
-    localStorage.setItem(`reply${id}`, JSON.stringify(profileId.reply));
+    localStorage.setItem(`reply${id}`, JSON.stringify(profile.reply));
   }, []);
   function handleSubmit(event) {
     const textarea = document.getElementById("inputbox");
@@ -49,7 +50,7 @@ function Chatting(props) {
     event.preventDefault();
     let replyitemList = [...replyitem];
     replyitemList.push(replyMsg);
-    profileId.reply.push(replyMsg);
+    profile.reply.push(replyMsg);
     setreplyitem(replyitemList);
     localStorage.setItem(`reply${id}`, JSON.stringify(replyitemList));
   }
@@ -69,24 +70,12 @@ function Chatting(props) {
         <div className="date">{todayDate}</div>
         <div className="get-msg-wrapper">
           <ul className="get-msg-list">
-            {profileId.msg.map((a, i) => {
-              return (
-                <li className="get-msg-item" key={i}>
-                  <img
-                    src={"../assets/profile0" + id + ".jpg"}
-                    alt={profileId.name}
-                  />
-                  <div className="msg">
-                    <h4>{profileId.name}</h4>
-                    <p>{profileId.msg[i].text}</p>
-                    <span>{profileId.msg[i].time}</span>
-                  </div>
-                </li>
-              );
+            {profile.msg.map((a, i) => {
+              return <ArtistMsg profile={profile} i={i} key={i} />;
             })}
           </ul>
         </div>
-        <Mymsg profile={profileId} />
+        <Mymsg profile={profile} />
         <div className="send-msg-wrapper">
           <form onSubmit={handleSubmit}>
             <textarea

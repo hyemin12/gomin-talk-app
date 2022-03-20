@@ -1,18 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
+import "../css/nav.scss";
 
-function Nav(props) {
-  for (let x = 0; x < props.profile.length; x++) {
-    if (window.location.pathname === `/chat/${props.profile[x].id}`) {
-      return null;
-    } else if (
-      window.location.pathname === `/profile/detail${props.profile[x].id}`
-    ) {
-      return null;
-    }
-  }
-
+function Nav() {
   return (
     <section className="nav">
       <Switch>

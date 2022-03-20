@@ -1,0 +1,81 @@
+@import "./main.scss";
+
+// PROFILE
+.profile {
+  padding: 10px 20px;
+  .profile-user {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+
+  .profile-friends {
+    padding: 10px 0;
+    .profile-user-sub-title {
+      padding-top: 15px;
+    }
+  }
+}
+
+// PROFILE DETAIL
+.profile-detail {
+  width: 100vw;
+  height: calc(100vh - 45px);
+  position: relative;
+  button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 34px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 9;
+    cursor: pointer;
+  }
+  .bg-img {
+    width: 100vw;
+    height: calc(100vh - 45px);
+    background-size: cover !important;
+    position: absolute;
+    top: 0px;
+    left: 0;
+  }
+  .bg-opacity {
+    width: 100vw;
+    height: calc(100vh - 45px);
+    background: #444;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    opacity: 0.5;
+  }
+  .user-wrap {
+    width: 200px;
+    position: absolute;
+    top: 60%;
+    margin-left: 50%;
+    transform: translateX(-100px);
+    .user-img {
+      display: flex;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      object-fit: cover;
+      z-index: 9;
+    }
+    .user-content {
+      color: #fff;
+      text-align: center;
+      z-index: 9;
+      h4 {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}

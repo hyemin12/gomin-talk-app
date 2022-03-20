@@ -1,26 +1,19 @@
 import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Oversize from "./components/Oversize.js";
+import Oversize from "./routes/Oversize.js";
 import StatusBar from "./components/StatusBar.js";
-import Profile from "./components/Profile.js";
-import Nav from "./components/Nav.js";
-import Chat from "./components/Chat.js";
-import Community from "./components/Community.js";
-import Setting from "./components/Setting.js";
-import Chatting from "./components/Chatting.js";
+import Profile from "./routes/Profile.js";
+import ProfileDetail from "./routes/ProfileDetail.js";
+import Chat from "./routes/Chat.js";
+import Chatting from "./routes/Chatting.js";
+import Community from "./routes/Community.js";
+import Setting from "./routes/Setting.js";
 
 import Data from "./data/data.js";
-import SiteData from "./data/data_site.js";
-import mySiteData from "./data/data_community.js";
-
-import "./main.scss";
-import ProfileDetail from "./components/ProfileDetail.js";
 
 function App() {
-  let [profile, profileChange] = useState(Data);
-  let [site, siteChange] = useState(SiteData);
-  let [mySite, MysiteChange] = useState(mySiteData);
+  const [profile, profileChange] = useState(Data);
   return (
     <div className="App">
       <Oversize />
@@ -43,13 +36,13 @@ function App() {
           </Route>
 
           <Route path="/community">
-            <Community site={site} mySite={mySite} />
+            <Community />
           </Route>
 
           <Route path="/setting">
             <Setting profile={profile} />
           </Route>
-          <Nav profile={profile} />
+          {/* <Nav profile={profile} /> */}
         </>
       </Switch>
     </div>
