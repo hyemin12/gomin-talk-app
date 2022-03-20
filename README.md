@@ -34,35 +34,40 @@ React를 사용하여 Lysn Bubble 어플을 클론 코딩하였다. 프로필 �
 ## #route 구성
 
 <br>
-<img src="./_markdown/oversize.png" >
-oversize : 550px 이상일 경우 화면 축소 안내 화면<br>
-<br>
-<br>
-<img src="./_markdown/profile.png" >
-profile : 메인페이지, 내 프로필과 친구들 목록<br>
-<br>
-<br>
-<img src="./_markdown/profile_detail.png" >
-profile detail: 친구들 프로필 이미지를 클릭하였을 때 출력되는 화면<br>
-<br>
-<br>
 
-chat : 채팅방 목록<br>
-<br>
-<br>
+<table >
+<tr style="text-align:center">
+<th width="50%">profile</th>
+<th width="50%">profile detail</th>
+</tr>
+<tr>
+<td>메인페이지, 내 프로필과 친구들 목록</td>
+<td>친구들 프로필 이미지를 클릭하였을 때 출력되는 화면</td></tr>
+<tr><td><img src="./_markdown/profile.png" ></td><td><img src="./_markdown/profile_detail.png" ></td><tr>
+</table>
 
-<img src="./_markdown/chatting.png" >
-chatting : 채팅방, 친구와 주고받은 메세지를 확인할 수 있음<br>
-<br>
-<br>
+<table>
+<tr>
+<th width="50%">chat</th>
+<th width="50%">chatting</th>
+</tr>
+<tr>
+<td>채팅방 목록</td>
+<td>채팅방, 친구와 주고받은 메세지를 확인할 수 있음</td></tr>
+<tr><td><img src="./_markdown/chat.png" ></td><td><img src="./_markdown/chatting.png" ></td><tr>
+</table>
 
-<img src="./_markdown/community.png" >
-community : 추천 커뮤니티와 사이트를 확인 할 수 있음<br>
-<br>
-<br>
-<img src="./_markdown/setting.png" >
-setting: 어플 설정 페이지 
-<br>
+<table>
+<tr>
+<th width="50%">community</th>
+<th width="50%">setting</th>
+</tr>
+<tr>
+<td>추천 커뮤니티와 사이트를 확인 할 수 있음</td>
+<td>어플 설정 페이지 </td></tr>
+<tr><td><img src="./_markdown/community.png" ></td><td><img src="./_markdown/profile.png" ></td><tr>
+</table>
+
 <br>
 <hr>
 
